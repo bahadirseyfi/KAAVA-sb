@@ -9,10 +9,7 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet weak var header: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var message: UILabel!
-    @IBOutlet weak var sender: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +18,8 @@ class PostCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-       
+     
     }
     
 }
+
