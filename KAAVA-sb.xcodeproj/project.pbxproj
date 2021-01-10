@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18221FB82591531700BDE090 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18221FB72591531700BDE090 /* MapViewController.swift */; };
+		1889E111259E626F00BC698A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E110259E626F00BC698A /* APIRequest.swift */; };
+		1889E114259E63A000BC698A /* SendPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E113259E63A000BC698A /* SendPosts.swift */; };
+		1889E117259E66DB00BC698A /* SendPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E116259E66DB00BC698A /* SendPostViewController.swift */; };
+		189BB6262599F5F500BFE244 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189BB6252599F5F500BFE244 /* Service.swift */; };
 		18DD658E2583FDD000C5EDF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD658D2583FDD000C5EDF5 /* AppDelegate.swift */; };
 		18DD65902583FDD000C5EDF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD658F2583FDD000C5EDF5 /* SceneDelegate.swift */; };
 		18DD65922583FDD000C5EDF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DD65912583FDD000C5EDF5 /* ViewController.swift */; };
@@ -18,9 +23,15 @@
 		18EF83892584D4B2004A1679 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EF83872584D4B2004A1679 /* PostCell.xib */; };
 		18EF838C2584FA9C004A1679 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF838B2584FA9C004A1679 /* PostViewController.swift */; };
 		18FF108625868AA1003C3457 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FF108525868AA1003C3457 /* DetailsViewController.swift */; };
+		C8AA3E714E23A05A356DE63C /* Pods_KAAVA_sb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E59E424AF408054BA4D7E5 /* Pods_KAAVA_sb.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18221FB72591531700BDE090 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1889E110259E626F00BC698A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		1889E113259E63A000BC698A /* SendPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPosts.swift; sourceTree = "<group>"; };
+		1889E116259E66DB00BC698A /* SendPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPostViewController.swift; sourceTree = "<group>"; };
+		189BB6252599F5F500BFE244 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		18DD658A2583FDD000C5EDF5 /* KAAVA-sb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KAAVA-sb.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DD658D2583FDD000C5EDF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DD658F2583FDD000C5EDF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +45,9 @@
 		18EF83872584D4B2004A1679 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		18EF838B2584FA9C004A1679 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		18FF108525868AA1003C3457 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		26E59E424AF408054BA4D7E5 /* Pods_KAAVA_sb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAAVA_sb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC20508A4EC5945BD57613CB /* Pods-KAAVA-sb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAAVA-sb.debug.xcconfig"; path = "Target Support Files/Pods-KAAVA-sb/Pods-KAAVA-sb.debug.xcconfig"; sourceTree = "<group>"; };
+		DF9AD8F858EF1006536B765B /* Pods-KAAVA-sb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAAVA-sb.release.xcconfig"; path = "Target Support Files/Pods-KAAVA-sb/Pods-KAAVA-sb.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8AA3E714E23A05A356DE63C /* Pods_KAAVA_sb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +67,8 @@
 			children = (
 				18DD658C2583FDD000C5EDF5 /* KAAVA-sb */,
 				18DD658B2583FDD000C5EDF5 /* Products */,
+				5E0C95BCD7B2ADF625376C16 /* Pods */,
+				97E06DF1F46300844CE83340 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				18EF83832584CDF0004A1679 /* Posts.swift */,
+				189BB6252599F5F500BFE244 /* Service.swift */,
+				1889E110259E626F00BC698A /* APIRequest.swift */,
+				1889E113259E63A000BC698A /* SendPosts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,8 +122,27 @@
 				18DD65912583FDD000C5EDF5 /* ViewController.swift */,
 				18EF838B2584FA9C004A1679 /* PostViewController.swift */,
 				18FF108525868AA1003C3457 /* DetailsViewController.swift */,
+				18221FB72591531700BDE090 /* MapViewController.swift */,
+				1889E116259E66DB00BC698A /* SendPostViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E0C95BCD7B2ADF625376C16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC20508A4EC5945BD57613CB /* Pods-KAAVA-sb.debug.xcconfig */,
+				DF9AD8F858EF1006536B765B /* Pods-KAAVA-sb.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		97E06DF1F46300844CE83340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26E59E424AF408054BA4D7E5 /* Pods_KAAVA_sb.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18DD659E2583FDD100C5EDF5 /* Build configuration list for PBXNativeTarget "KAAVA-sb" */;
 			buildPhases = (
+				AFC365FFC7D720242B79DEED /* [CP] Check Pods Manifest.lock */,
 				18DD65862583FDD000C5EDF5 /* Sources */,
 				18DD65872583FDD000C5EDF5 /* Frameworks */,
 				18DD65882583FDD000C5EDF5 /* Resources */,
+				AB00CC1F1E2E370E30B075A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +213,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AB00CC1F1E2E370E30B075A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KAAVA-sb/Pods-KAAVA-sb-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KAAVA-sb/Pods-KAAVA-sb-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KAAVA-sb/Pods-KAAVA-sb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC365FFC7D720242B79DEED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAAVA-sb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18DD65862583FDD000C5EDF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -179,11 +262,16 @@
 			files = (
 				18DD65922583FDD000C5EDF5 /* ViewController.swift in Sources */,
 				18EF838C2584FA9C004A1679 /* PostViewController.swift in Sources */,
+				1889E117259E66DB00BC698A /* SendPostViewController.swift in Sources */,
 				18FF108625868AA1003C3457 /* DetailsViewController.swift in Sources */,
 				18EF83842584CDF0004A1679 /* Posts.swift in Sources */,
 				18DD658E2583FDD000C5EDF5 /* AppDelegate.swift in Sources */,
+				189BB6262599F5F500BFE244 /* Service.swift in Sources */,
 				18DD65902583FDD000C5EDF5 /* SceneDelegate.swift in Sources */,
+				1889E114259E63A000BC698A /* SendPosts.swift in Sources */,
 				18EF83882584D4B2004A1679 /* PostCell.swift in Sources */,
+				1889E111259E626F00BC698A /* APIRequest.swift in Sources */,
+				18221FB82591531700BDE090 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +355,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -321,12 +410,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		18DD659F2583FDD100C5EDF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC20508A4EC5945BD57613CB /* Pods-KAAVA-sb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,12 +431,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "apple1.KAAVA-sb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		18DD65A02583FDD100C5EDF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF9AD8F858EF1006536B765B /* Pods-KAAVA-sb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -359,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "apple1.KAAVA-sb";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

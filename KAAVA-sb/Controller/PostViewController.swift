@@ -6,85 +6,104 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PostsTableViewCell: UITableViewCell {
+    var post : Posts? {
+        didSet {
+            guard let post = post else {return}
+            senderCell.text = post.name
+            headerCell.text = post.postName
+            timeCell.text = String(post.postLike)
+        }
+    }
     @IBOutlet weak var senderCell: UILabel!
     @IBOutlet weak var headerCell: UILabel!
     @IBOutlet weak var timeCell: UILabel!
 }
 
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
-    let cellSpacingHeight: CGFloat = 10
     
-    var posts : [Posts] = [
-        Posts(sender: "Baho", header: "Consectetur adipiscing elit", time: "4 weeks ago", message: "Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant."),
-        
-        Posts(sender: "Meral", header: "Euismod in pellentesque mas", time: "4 weeks ago", message: "Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant."),
-        
-        Posts(sender: "Salih", header: "Consectetur adipiscing elit", time: "4 weeks ago", message: "Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant."),
-        
-        Posts(sender: "Cemre", header: "Euismod in pellentesque mas", time: "4 weeks ago", message: "cemrenin yazdıkları geldi burayaaaaa."),
-        
-        Posts(sender: "Halil", header: "HALİL HİLAL yazdıkları geldi burayaaaaa", time: "4 weeks ago", message: "cemrenin yazdıkları geldi burayaaaaa.")
-    ]
+    static var id_deneme : Int = 0
+
+    var posts = [Posts]()
+    var comments = [Comments]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    let cellSpacingHeight: CGFloat = 0
+    
+    //var posts : [Posts] = []
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tıklandı")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return self.posts.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
             return cellSpacingHeight
         }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")            as! PostsTableViewCell
-        let postlar = posts[indexPath.row]
-        let harf = postlar.sender
-        let ilkharf = harf[harf.index(harf.startIndex, offsetBy: 0)]
-        cell.senderCell?.text = String(ilkharf)
-        cell.headerCell?.text = postlar.header
-        cell.timeCell?.text = postlar.time
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! PostsTableViewCell
+        cell.post = self.posts[indexPath.row]
+
         cell.layer.cornerRadius = 5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.masksToBounds = true
+        
         return cell
     }
     
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.estimatedRowHeight = 88
-//        tableView.rowHeight = UITableView.automaticDimension
+        
+        Service.shared.fetchPosts { (posts, error) in
+            if let error = error{
+                print(error)
+                return
+            }
+            guard let posts = posts else {return}
+            
+            self.posts = posts
+           // print(posts)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+        Service.shared.fetchComments { (comments, error) in
+            if let error = error {
+                print("debug 3", error)
+                return
+            }
+            
+            guard let comments = comments else {return}
+            
+            self.comments = comments
+            print(comments)
+        }
+
+       
     }
-    
-    
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailVC" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destVC = segue.destination as! DetailsViewController
-                destVC.headerText = posts[indexPath.row].header
-                destVC.senderText = posts[indexPath.row].sender
-                destVC.messageText = posts[indexPath.row].message
+                
+                destVC.headerText = self.posts[indexPath.row].postName
+                destVC.senderText = self.posts[indexPath.row].name
+                destVC.messageText = self.posts[indexPath.row].postDescription
+                
+                PostViewController.id_deneme = self.posts[indexPath.row].id
             }
         }
     }
-    
-    
 }
-
-
-//extension PostViewController: UITableViewDataSource {
-//}
-//extension PostViewController: UITableViewDelegate {
-//}
