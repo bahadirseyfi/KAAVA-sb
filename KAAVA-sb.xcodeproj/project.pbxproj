@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18221FB82591531700BDE090 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18221FB72591531700BDE090 /* MapViewController.swift */; };
+		1840526625B4F0FF00D3E457 /* SendComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840526525B4F0FF00D3E457 /* SendComments.swift */; };
 		1889E111259E626F00BC698A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E110259E626F00BC698A /* APIRequest.swift */; };
 		1889E114259E63A000BC698A /* SendPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E113259E63A000BC698A /* SendPosts.swift */; };
 		1889E117259E66DB00BC698A /* SendPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E116259E66DB00BC698A /* SendPostViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		18221FB72591531700BDE090 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1840526525B4F0FF00D3E457 /* SendComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendComments.swift; sourceTree = "<group>"; };
 		1889E110259E626F00BC698A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1889E113259E63A000BC698A /* SendPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPosts.swift; sourceTree = "<group>"; };
 		1889E116259E66DB00BC698A /* SendPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPostViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				189BB6252599F5F500BFE244 /* Service.swift */,
 				1889E110259E626F00BC698A /* APIRequest.swift */,
 				1889E113259E63A000BC698A /* SendPosts.swift */,
+				1840526525B4F0FF00D3E457 /* SendComments.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				18EF838C2584FA9C004A1679 /* PostViewController.swift in Sources */,
 				1889E117259E66DB00BC698A /* SendPostViewController.swift in Sources */,
 				18FF108625868AA1003C3457 /* DetailsViewController.swift in Sources */,
+				1840526625B4F0FF00D3E457 /* SendComments.swift in Sources */,
 				18EF83842584CDF0004A1679 /* Posts.swift in Sources */,
 				18DD658E2583FDD000C5EDF5 /* AppDelegate.swift in Sources */,
 				189BB6262599F5F500BFE244 /* Service.swift in Sources */,

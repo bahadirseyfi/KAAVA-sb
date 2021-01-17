@@ -268,6 +268,9 @@
                                             <constraint firstAttribute="height" constant="31" id="geh-cX-0c0"/>
                                         </constraints>
                                         <state key="normal" image="comment"/>
+                                        <connections>
+                                            <action selector="sendCommentBtn:" destination="k9d-PD-E1J" eventType="touchUpInside" id="mdh-wM-LQ8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwe-Ul-7Py">
                                         <rect key="frame" x="140" y="0.0" width="31" height="31"/>
@@ -355,9 +358,9 @@
                                     <action selector="backBtn:" destination="k9d-PD-E1J" eventType="touchUpInside" id="JBV-xU-JbV"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add Comment" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8go-gQ-Spr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8go-gQ-Spr">
                                 <rect key="frame" x="60" y="511" width="294" height="34"/>
-                                <color key="backgroundColor" red="0.22350105640000001" green="0.2431538701" blue="0.27447208760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="8n4-F1-Gta"/>
                                     <constraint firstAttribute="width" constant="294" id="I6n-S4-7h6"/>
@@ -390,6 +393,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aSY-IK-Fh0"/>
                     <connections>
+                        <outlet property="commentAdd" destination="8go-gQ-Spr" id="W0f-ao-kFz"/>
                         <outlet property="headerLabel" destination="JID-Cf-BGL" id="533-vY-SNa"/>
                         <outlet property="messageLabel" destination="rNg-XL-Kx3" id="iRk-m5-JLY"/>
                         <outlet property="sender" destination="rOg-cj-EBx" id="dXt-jt-IlV"/>

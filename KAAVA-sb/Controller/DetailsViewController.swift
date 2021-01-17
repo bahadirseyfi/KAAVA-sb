@@ -32,6 +32,7 @@ extension UILabel {
 
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var req = APIRequest(endpoint: "")
     
     var comments = [Comments]()
 
@@ -45,7 +46,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var commentAdd: UITextField!
+    
     let cellSpacingHeight: CGFloat = 0
     
 //    MARK : - View Lifecycle
@@ -119,6 +121,21 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func sendCommentBtn(_ sender: UIButton) {
+        
+        if commentAdd.text == "" {
+            commentAdd.backgroundColor = .red
+        } else {
+            req.sendCommentRequest(id: PostViewController.id_deneme, senderName: "Guest", commentPost: commentAdd.text!)
+            commentAdd.backgroundColor = .darkGray
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
+    
     
     
 
