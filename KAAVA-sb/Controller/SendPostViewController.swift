@@ -40,8 +40,6 @@ class SendPostViewController: UIViewController {
         
     }
     
-    
-    
 }
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

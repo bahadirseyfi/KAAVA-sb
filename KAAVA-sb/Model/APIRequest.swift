@@ -55,7 +55,7 @@ struct APIRequest {
     
     func sendRequest(name: String, descript: String, header: String) {
         
-        let post = SendPosts(name: name, postDescription: descript, postlike: 1, postName: header, postTime: "Mon Nov 17")
+        let post = SendPosts(name: name, postDescription: descript, postlike: 0, postName: header, postTime: "Mon Nov 11 2018 07:57:16 GMT+0300 (GMT+03:00)")
         
         let postRequest = APIRequest(endpoint: "posts")
         postRequest.save(post) { result in
