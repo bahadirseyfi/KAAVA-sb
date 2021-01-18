@@ -21,3 +21,10 @@ struct Comments : Decodable {
     let commentTime : String
     let senderName : String
 }
+
+struct PostLike : Codable {
+    let id: Int
+    let postLike: Int
+}
+
+//final class PostLike :

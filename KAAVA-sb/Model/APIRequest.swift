@@ -80,6 +80,32 @@ struct APIRequest {
         }
     }
     
+    func likeSave(_ messageToSave: PostLike, completion: @escaping(Result<PostLike, APIError>) -> Void) {
+        
+        do{
+            var urlRequest = URLRequest(url: resourceURL)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.httpBody = try JSONEncoder().encode(messageToSave)
+            
+            let dataTask = URLSession.shared.dataTask(with: urlRequest) {data, response, _ in
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
+                      let jsonData = data else {
+                    completion(.failure(.responseProblem))
+                    return
+                }
+                do {
+                    let messageData = try JSONDecoder().decode(PostLike.self, from: jsonData)
+                    completion(.success(messageData))
+                } catch {
+                    completion(.failure(.decodingProblem))
+                }
+            }
+            dataTask.resume()
+        } catch {
+            completion(.failure(.encodingProblem))
+        }
+    }
     
     func sendRequest(name: String, descript: String, header: String) {
         
@@ -108,6 +134,20 @@ struct APIRequest {
                 print("The following post has been sent: \(message.senderName)")
             case .failure(let error):
                 print("An error occured \(error)")
+            }
+        }
+    }
+    
+    func sendLike(id: Int, postLike: Int){
+        let postLike = PostLike(id: id, postLike: postLike)
+        
+        let likeRequest = APIRequest(endpoint: "postLike")
+        likeRequest.likeSave(postLike) { result in
+            switch result {
+            case .success(let message):
+                print("The following post has been sent: \(message.postLike)")
+            case .failure(let error):
+                print("An error occured \(error.localizedDescription)")
             }
         }
     }

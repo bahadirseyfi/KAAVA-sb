@@ -33,8 +33,11 @@ extension UILabel {
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var req = APIRequest(endpoint: "")
+    var reqLike = APIRequest(endpoint: "postLike")
     
     var comments = [Comments]()
+    
+    var likeIndex = 0
 
     var headerText : String?
     var senderText : String?
@@ -49,6 +52,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var commentAdd: UITextField!
     
     let cellSpacingHeight: CGFloat = 0
+    
+    @IBOutlet weak var likeBtnUI: UIButton!
+    
     
 //    MARK : - View Lifecycle
     
@@ -132,6 +138,21 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+        
+    }
+    
+    @IBAction func likeBtn(_ sender: UIButton) {
+        likeIndex = likeIndex + 1
+        
+        if likeIndex % 2 != 0 {
+            let image = UIImage(named: "like")
+            self.likeBtnUI.setImage(image, for: .normal)
+            reqLike.sendLike(id: PostViewController.id_deneme, postLike: 1)
+        } else {
+            let image = UIImage(named: "dislike")
+            self.likeBtnUI.setImage(image, for: .normal)
+            reqLike.sendLike(id: PostViewController.id_deneme, postLike: -1)
         }
         
     }

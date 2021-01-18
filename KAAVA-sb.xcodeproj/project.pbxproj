@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18221FB82591531700BDE090 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18221FB72591531700BDE090 /* MapViewController.swift */; };
+		1827249925B6242D006520A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827249825B6242D006520A8 /* Extensions.swift */; };
 		1840526625B4F0FF00D3E457 /* SendComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840526525B4F0FF00D3E457 /* SendComments.swift */; };
 		1889E111259E626F00BC698A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E110259E626F00BC698A /* APIRequest.swift */; };
 		1889E114259E63A000BC698A /* SendPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E113259E63A000BC698A /* SendPosts.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		18221FB72591531700BDE090 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1827249825B6242D006520A8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1840526525B4F0FF00D3E457 /* SendComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendComments.swift; sourceTree = "<group>"; };
 		1889E110259E626F00BC698A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1889E113259E63A000BC698A /* SendPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPosts.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1827249725B6241F006520A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1827249825B6242D006520A8 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		18DD65812583FDD000C5EDF5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		18DD658C2583FDD000C5EDF5 /* KAAVA-sb */ = {
 			isa = PBXGroup;
 			children = (
+				1827249725B6241F006520A8 /* Extensions */,
 				18EF837C2584CC2D004A1679 /* Model */,
 				18EF837D2584CC33004A1679 /* View */,
 				18EF837E2584CC38004A1679 /* Controller */,
@@ -276,6 +287,7 @@
 				18EF83882584D4B2004A1679 /* PostCell.swift in Sources */,
 				1889E111259E626F00BC698A /* APIRequest.swift in Sources */,
 				18221FB82591531700BDE090 /* MapViewController.swift in Sources */,
+				1827249925B6242D006520A8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
