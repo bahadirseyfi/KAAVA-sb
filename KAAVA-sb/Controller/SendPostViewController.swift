@@ -47,7 +47,8 @@ class SendPostViewController: UIViewController {
         
         if nameTextField.text == "" || descriptionTextField.text == "" || headerTextField.text == "" {
             print("Bu alanlar boş bırakılamaz")
-            nameTextField.backgroundColor = UIColor.red
+            nameTextField.layer.borderColor = UIColor.red.cgColor
+            nameTextField.layer.borderWidth = 1
             descriptionTextField.backgroundColor = UIColor.red
         } else {
             req.sendRequest(name: nameTextField.text!, descript: descriptionTextField.text!, header: headerTextField.text!)

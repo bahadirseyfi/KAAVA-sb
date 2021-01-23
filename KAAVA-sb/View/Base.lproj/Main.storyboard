@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="103.79464285714285"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="2p1-FN-az1">
@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O28-eD-K3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-952" y="104"/>
+            <point key="canvasLocation" x="141" y="800"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="Tg6-Cf-IQs">
@@ -510,7 +510,7 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoY-Qv-KOa" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoY-Qv-KOa" customClass="RoundedButton" customModule="KAAVA_sb" customModuleProvider="target">
                                         <rect key="frame" x="62.5" y="267.5" width="250" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.67847102879999999" blue="0.70971184970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -550,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fw-ij-yHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044.9275362318842" y="-380.35714285714283"/>
+            <point key="canvasLocation" x="3863.7681159420295" y="-380.35714285714283"/>
         </scene>
         <!--Gönderi-->
         <scene sceneID="Wfq-K5-bOZ">
@@ -709,7 +709,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzP-hB-K3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.8550724637682" y="393.75"/>
+            <point key="canvasLocation" x="2955.072463768116" y="405.80357142857139"/>
         </scene>
         <!--Forum-->
         <scene sceneID="GXH-np-ngL">
@@ -874,7 +874,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leH-V1-BBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="-380"/>
+            <point key="canvasLocation" x="2836.2318840579715" y="-380.35714285714283"/>
         </scene>
     </scenes>
     <resources>

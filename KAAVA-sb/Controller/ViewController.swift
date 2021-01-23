@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var forumUI: UIButton!
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         buttonUI.applyDesign(color: UIColor.darkGray, cornerRadius: 9)
         mapUI.applyDesign(color: UIColor.init(red: 2/255, green: 173/255, blue: 181/255, alpha: 1), cornerRadius: 20)
         forumUI.applyDesign(color: UIColor.init(red: 2/255, green: 173/255, blue: 181/255, alpha: 1), cornerRadius: 20)
+        
+       
+
+        
     }
     
     
