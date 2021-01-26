@@ -54,6 +54,7 @@ class SendPostViewController: UIViewController {
             req.sendRequest(name: nameTextField.text!, descript: descriptionTextField.text!, header: headerTextField.text!)
             nameTextField.backgroundColor = UIColor.white
             descriptionTextField.backgroundColor = UIColor.white
+            print("try")
         }
         
     }
