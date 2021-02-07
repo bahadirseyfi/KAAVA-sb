@@ -70,10 +70,8 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(error)
                 return
             }
-            guard let posts = posts else {return}
-            
+            guard let posts = posts else { return }
             self.posts = posts
-           // print(posts)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
